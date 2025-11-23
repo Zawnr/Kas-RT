@@ -1,0 +1,37 @@
+# 1. Dependencies (Wajib di-ignore karena berat)
+node_modules/
+.pnp
+.pnp.js
+
+# 2. Expo specific (Cache lokal Expo)
+.expo/
+web-build/
+dist/
+
+# 3. Environment Variables (PENTING: Agar kunci Supabase tidak dicuri)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env*
+
+# 4. Native Builds (File hasil build aplikasi)
+*.apk
+*.aab
+*.apks
+
+# 5. Editor & OS Junk Files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 6. Debug & Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
