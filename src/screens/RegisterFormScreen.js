@@ -80,6 +80,13 @@ export default function RegisterFormScreen({ route, navigation }) {
       navigation.navigate('Login');
 
     } catch (error) {
+      console.error("❌ ERROR REGISTRASI TERJADI:");
+      console.error("Pesan:", error.message);
+      console.error("Detail:", JSON.stringify(error, null, 2)); 
+      
+      if (error.details) console.error("DB Details:", error.details);
+      if (error.hint) console.error("Hint:", error.hint);
+
       Alert.alert("Terjadi Kesalahan", error.message);
     } finally {
       setLoading(false);
